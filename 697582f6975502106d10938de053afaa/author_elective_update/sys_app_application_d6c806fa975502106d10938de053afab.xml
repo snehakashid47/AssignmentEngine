@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Skills</name>
+        <order>100</order>
+        <roles>x_1371514_pletra_a.skills_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 06:47:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d6c806fa975502106d10938de053afab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Skills</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_app_application_d6c806fa975502106d10938de053afab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 06:47:04</sys_updated_on>
+        <title>Skills</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</application>
+        <file_path/>
+        <instance_id>52b31258dbb2b910199b172913961955</instance_id>
+        <instance_name>dev224243</instance_name>
+        <name>sys_app_application_d6c806fa975502106d10938de053afab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Skills</name><order>100</order><roles>x_1371514_pletra_a.skills_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-04-05 06:47:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>d6c806fa975502106d10938de053afab</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Skills</sys_name><sys_overrides/><sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package><sys_policy/><sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope><sys_update_name>sys_app_application_d6c806fa975502106d10938de053afab</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-04-05 06:47:04</sys_updated_on><title>Skills</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>13357421</payload_hash>
+        <record_name>Skills</record_name>
+        <reverted_from/>
+        <source>cfd7827a975502106d10938de053afaf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 06:47:04</sys_created_on>
+        <sys_id>5ac84efa975502106d10938de053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18ead02c8ac0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 06:47:04</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>52c806fabd550210ec58618a7d137ead</update_guid>
+        <update_guid_history>52c806fabd550210ec58618a7d137ead:13357421</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Skills">0a835a3a979502106d10938de053af91</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:34:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>08c8574fcd40403e939cb7b6f2c7ae01</sys_id>
+        <sys_metadata>d6c806fa975502106d10938de053afab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Skills</sys_name>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_scope_delete display_value="">b22fc6b7e0ce4b7692c46b5a2bd848e4</sys_scope_delete>
+        <sys_update_name>sys_app_application_d6c806fa975502106d10938de053afab</sys_update_name>
+        <sys_update_version display_value="sys_app_application_d6c806fa975502106d10938de053afab">5ac84efa975502106d10938de053afc3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:34:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

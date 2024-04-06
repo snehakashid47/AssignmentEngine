@@ -17,16 +17,16 @@ LIFO: Last In First Out, prioritizes tasks based on their recent arrival, with t
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-04-05 06:36:59</sys_created_on>
         <sys_id>7036ce3a975502106d10938de053af2f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>x_1371514_pletra_a.Assignment Engine Selection</sys_name>
         <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
         <sys_policy/>
         <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
         <sys_update_name>sys_properties_7036ce3a975502106d10938de053af2f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-04-05 06:36:59</sys_updated_on>
+        <sys_updated_on>2024-04-05 07:24:19</sys_updated_on>
         <type>choicelist</type>
-        <value/>
+        <value>Round-Robin</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=7036ce3a975502106d10938de053af2f"/>

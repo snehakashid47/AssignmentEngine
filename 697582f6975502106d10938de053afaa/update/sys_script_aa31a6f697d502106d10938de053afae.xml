@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Store data</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    // Add your code here
+
+    var propertyName = 'x_1371514_pletra_a.Assignment Engine Selection'; // Replace with your property name
+    var propertyValue;
+
+    // Query the sys_properties table
+    var propertyGR = new GlideRecord('sys_properties');
+    propertyGR.addQuery('name', propertyName);
+    propertyGR.query();
+
+    // Check if the property record exists and get its value
+    if (propertyGR.next()) {
+        propertyValue = propertyGR.getValue('value');
+    }
+
+
+    try {
+
+        var table_n = new GlideRecord('sys_db_object');
+        table_n.addQuery('label', current.sys_class_name);
+        table_n.query();
+        while (table_n.next()) {
+
+            var record = new GlideRecord(table_n.name);
+            record.addQuery('number', current.number);
+            record.query();
+
+
+            while (record.next()) {
+                gs.log("Record object ========== :   " + JSON.stringify(record.caller_id) + "++++>" + record.category.getDisplayValue());
+
+                var gr = new GlideRecord('x_1371514_pletra_a_work_items');
+                gr.addQuery('u_record_id', current.number);
+                gr.query();
+                if (gr.next()) {
+                    gr.u_assigned_to = current.assigned_to;
+                    gr.u_assignment_group = current.assignment_group;
+                    gr.u_category = record.category.getDisplayValue();
+                    gr.u_caller = record.caller_id;
+                    gr.u_location = record.location.getDisplayValue();
+                    gr.u_language = record.caller_id.preferred_language;
+                    gr.u_zipcode = record.caller_id.zip;
+                    gr.u_state = record.state.getDisplayValue();
+                    gr.u_assignment_type = propertyValue;
+
+
+                    gr.update();
+                } else {
+                    var description = record.description.toString();
+                    var getCriterias = description.split('Create Criteria ');
+                    gr.initialize();
+                    //  gr.u_table = current.sys_class_name;
+					gr.setValue('u_record_id',current.number);
+                    //gr. u_record_id = current.number;
+                    // gr.u_assigned_to = current.assigned_to;
+                    // gr.u_assignment_group = current.assignment_group;
+                    // gr.u_category = record.category.getDisplayValue();
+                    // gr.u_caller = record.caller_id;
+                    // gr.u_location = record.location.getDisplayValue();
+                    // gr.u_language = record.caller_id.preferred_language;
+                    // gr.u_zipcode = record.caller_id.zip;
+                    // gr.u_state = record.state.getDisplayValue();
+                    // gr.u_assignment_type = propertyValue;
+                    // gr.u_criterias = getCriterias[1];
+                   // gs.log("else Block  " + gr.u_record_id);
+
+                    gr.insert();
+                }
+            }
+
+
+        }
+    } catch (e) {
+        gs.info(e.message)
+        gs.addErrorMessage('Exception throw while biting apple:' + e.message);
+
+
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 08:34:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aa31a6f697d502106d10938de053afae</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Store data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_script_aa31a6f697d502106d10938de053afae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 12:28:17</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa31a6f697d502106d10938de053afae"/>
+</record_update>

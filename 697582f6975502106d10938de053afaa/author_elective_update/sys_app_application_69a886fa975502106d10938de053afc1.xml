@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Agents with Criteria</name>
+        <order>100</order>
+        <roles>x_1371514_pletra_a.agents_with_criteria_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 06:46:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>69a886fa975502106d10938de053afc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agents with Criteria</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_app_application_69a886fa975502106d10938de053afc1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 06:46:29</sys_updated_on>
+        <title>Agents with Criteria</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</application>
+        <file_path/>
+        <instance_id>52b31258dbb2b910199b172913961955</instance_id>
+        <instance_name>dev224243</instance_name>
+        <name>sys_app_application_69a886fa975502106d10938de053afc1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Agents with Criteria</name><order>100</order><roles>x_1371514_pletra_a.agents_with_criteria_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-04-05 06:46:29</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>69a886fa975502106d10938de053afc1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Agents with Criteria</sys_name><sys_overrides/><sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package><sys_policy/><sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope><sys_update_name>sys_app_application_69a886fa975502106d10938de053afc1</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-04-05 06:46:29</sys_updated_on><title>Agents with Criteria</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-2005969747</payload_hash>
+        <record_name>Agents with Criteria</record_name>
+        <reverted_from/>
+        <source>cfd7827a975502106d10938de053afaf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 06:46:29</sys_created_on>
+        <sys_id>ada886fa975502106d10938de053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18ead023e930000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 06:46:29</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>e1a886fa69550210abc4a352475ad1c3</update_guid>
+        <update_guid_history>e1a886fa69550210abc4a352475ad1c3:-2005969747</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Agents with Criteria">83639a3a979502106d10938de053af42</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:33:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>2c900a911e0f4ca590121a466ee80039</sys_id>
+        <sys_metadata>69a886fa975502106d10938de053afc1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agents with Criteria</sys_name>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_scope_delete display_value="">b22fc6b7e0ce4b7692c46b5a2bd848e4</sys_scope_delete>
+        <sys_update_name>sys_app_application_69a886fa975502106d10938de053afc1</sys_update_name>
+        <sys_update_version display_value="sys_app_application_69a886fa975502106d10938de053afc1">ada886fa975502106d10938de053afc3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:33:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

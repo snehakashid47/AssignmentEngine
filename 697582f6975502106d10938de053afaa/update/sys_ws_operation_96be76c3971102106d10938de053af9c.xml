@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>fetch_data</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+
+	var reqbody = request.body.dataString;
+
+	try{
+		
+		var parsedData = JSON.parse(reqbody);
+
+		// insert the record into staging table
+		
+		var res = {};
+		res["status"] = "Success";
+		res["message"] = "Record submitted for transformation";
+		response.setBody(JSON.stringify(res));
+
+	}
+	catch(ex){
+		var res = {};
+		res["status"] = "Error";
+		res["message"] = ex.message;
+		response.setBody(JSON.stringify(res));
+	}
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_1371514_pletra_a/getdata/fetch_data</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/fetch_data</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-06 05:26:18</sys_created_on>
+        <sys_id>96be76c3971102106d10938de053af9c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>fetch_data</sys_name>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_ws_operation_96be76c3971102106d10938de053af9c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-06 05:50:31</sys_updated_on>
+        <web_service_definition display_value="GetData">5a99ef32971d02106d10938de053afa2</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Assignment Type">9d70de36979502106d10938de053af3f</category>
+        <order>1</order>
+        <property display_value="x_1371514_pletra_a.Assignment Engine Selection" name="x_1371514_pletra_a.Assignment Engine Selection">7036ce3a975502106d10938de053af2f</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:20:49</sys_created_on>
+        <sys_id>28805a76979502106d10938de053afa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1371514_pletra_a.Assignment Engine Selection.Assignment Type</sys_name>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_28805a76979502106d10938de053afa1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:20:49</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

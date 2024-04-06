@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="abc806fa975502106d10938de053af99" label="Criteria" max_length="40" name="x_1371514_pletra_a_criteria" type="collection"/>
+    <element db_object_id="abc806fa975502106d10938de053af99" label="Criteria" max_length="40" name="x_1371514_pletra_a_criteria" type="collection">
+        <element label="Criteria Name" max_length="40" name="criteria_name" type="string"/>
+        <element label="Criteria Type" max_length="40" name="criteria_type" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
 </database>

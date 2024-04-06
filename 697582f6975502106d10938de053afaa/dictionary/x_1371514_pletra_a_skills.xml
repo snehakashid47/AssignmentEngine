@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="bfa80efa975502106d10938de053af29" label="Skills" max_length="40" name="x_1371514_pletra_a_skills" type="collection"/>
+    <element db_object_id="bfa80efa975502106d10938de053af29" label="Skills" max_length="40" name="x_1371514_pletra_a_skills" type="collection">
+        <element label="Agents" max_length="4000" name="agents" type="glide_list"/>
+        <element label="Assignment Engine Metadata" max_length="32" name="assignment_engine_metadata" reference="x_1371514_pletra_a_assignment_engine_metadata" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Skill Id" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Skill Category" max_length="40" name="skill_category" type="choice">
+            <choice/>
+        </element>
+        <element label="Skill Name" max_length="40" name="skill_name" type="string"/>
+        <index name="index">
+            <element name="assignment_engine_metadata"/>
+        </index>
+    </element>
 </database>

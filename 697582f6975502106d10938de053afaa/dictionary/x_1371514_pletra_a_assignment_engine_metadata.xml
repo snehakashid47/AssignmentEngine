@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="4ce8c67a975502106d10938de053af14" label="Assignment Engine Metadata" max_length="40" name="x_1371514_pletra_a_assignment_engine_metadata" type="collection"/>
+    <element db_object_id="4ce8c67a975502106d10938de053af14" label="Assignment Engine Metadata" max_length="40" name="x_1371514_pletra_a_assignment_engine_metadata" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Assignment Engine Rule" max_length="40" name="assignment_engine_rule" type="string"/>
+        <element label="Assignment Rule" max_length="32" name="assignment_rule" reference="x_1371514_pletra_a_agents_with_criteria" type="reference"/>
+        <element label="Assignment Type" max_length="40" name="assignment_type" type="string"/>
+        <element label="Select Criteria" max_length="4000" name="select_criteria" reference="x_1371514_pletra_a_agents_with_criteria" type="conditions"/>
+        <element label="Skills" max_length="32" name="skills" reference="x_1371514_pletra_a_skills" type="reference"/>
+        <element label="Table Name" max_length="80" name="table_name" reference="sys_db_object" type="table_name"/>
+        <index name="index">
+            <element name="assignment_rule"/>
+        </index>
+        <index name="index2">
+            <element name="skills"/>
+        </index>
+    </element>
 </database>

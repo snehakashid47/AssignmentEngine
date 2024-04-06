@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Store Data</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var propertyName = 'x_1371514_pletra_a.Assignment Engine Selection'; // Replace with your property name
+    var propertyValue;
+gs.log('heelo palash');
+    // Query the sys_properties table
+    var propertyGR = new GlideRecord('sys_properties');
+    propertyGR.addQuery('name', propertyName);
+    propertyGR.query();
+
+    // Check if the property record exists and get its value
+    if (propertyGR.next()) {
+        propertyValue = propertyGR.getValue('value');
+    }
+
+
+
+
+    var table_n = new GlideRecord('sys_db_object');
+    table_n.addQuery('label', current.sys_class_name);
+    table_n.query();
+    while (table_n.next()) {
+
+        var record = new GlideRecord(table_n.name);
+        record.addQuery('number', current.number);
+        record.query();
+
+
+        while (record.next()) {
+            gs.log("Record object ========== :   " + JSON.stringify(record.caller_id) + "++++>" + record.category.getDisplayValue());
+
+            var gr = new GlideRecord('x_1371514_pletra_a_work_items');
+            gr.addQuery('u_record_id', current.number);
+            gr.query();
+            if (gr.next()) {
+                gr.u_assigned_to = current.assigned_to;
+                gr.u_assignment_group = current.assignment_group;
+                gr.u_category = record.category.getDisplayValue();
+                gr.u_caller = record.caller_id;
+                gr.u_location = record.location.getDisplayValue();
+                gr.u_language = record.caller_id.preferred_language;
+                gr.u_zipcode = record.caller_id.zip;
+                gr.u_state = record.state.getDisplayValue();
+                gr.u_assignment_type = propertyValue;
+
+
+                gr.update();
+            } else {
+                var description = record.description.toString();
+                var getCriterias = description.split('Create Criteria ');
+                gr.initialize();
+                gr.u_table = current.sys_class_name;
+                gr.u_record_id = current.number;
+                gr.u_assigned_to = current.assigned_to;
+                gr.u_assignment_group = current.assignment_group;
+                gr.u_category = record.category.getDisplayValue();
+                gr.u_caller = record.caller_id;
+                gr.u_location = record.location.getDisplayValue();
+                gr.u_language = record.caller_id.preferred_language;
+                gr.u_zipcode = record.caller_id.zip;
+                gr.u_state = record.state.getDisplayValue();
+                gr.u_assignment_type = propertyValue;
+                gr.u_criterias = getCriterias[1];
+                gr.insert();
+            }
+        }
+
+
+
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:28:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1a819ab6979502106d10938de053af35</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Store Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_update_name>sys_script_1a819ab6979502106d10938de053af35</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:40:16</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=1a819ab6979502106d10938de053af35"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</application>
+        <file_path/>
+        <instance_id>52b31258dbb2b910199b172913961955</instance_id>
+        <instance_name>dev224243</instance_name>
+        <name>sys_script_1a819ab6979502106d10938de053af35</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;task&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Store Data&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    var propertyName = 'x_1371514_pletra_a.Assignment Engine Selection'; // Replace with your property name
+    var propertyValue;
+gs.log('heelo palash');
+    // Query the sys_properties table
+    var propertyGR = new GlideRecord('sys_properties');
+    propertyGR.addQuery('name', propertyName);
+    propertyGR.query();
+
+    // Check if the property record exists and get its value
+    if (propertyGR.next()) {
+        propertyValue = propertyGR.getValue('value');
+    }
+
+
+
+
+    var table_n = new GlideRecord('sys_db_object');
+    table_n.addQuery('label', current.sys_class_name);
+    table_n.query();
+    while (table_n.next()) {
+
+        var record = new GlideRecord(table_n.name);
+        record.addQuery('number', current.number);
+        record.query();
+
+
+        while (record.next()) {
+            gs.log("Record object ========== :   " + JSON.stringify(record.caller_id) + "++++&gt;" + record.category.getDisplayValue());
+
+            var gr = new GlideRecord('x_1371514_pletra_a_work_items');
+            gr.addQuery('u_record_id', current.number);
+            gr.query();
+            if (gr.next()) {
+                gr.u_assigned_to = current.assigned_to;
+                gr.u_assignment_group = current.assignment_group;
+                gr.u_category = record.category.getDisplayValue();
+                gr.u_caller = record.caller_id;
+                gr.u_location = record.location.getDisplayValue();
+                gr.u_language = record.caller_id.preferred_language;
+                gr.u_zipcode = record.caller_id.zip;
+                gr.u_state = record.state.getDisplayValue();
+                gr.u_assignment_type = propertyValue;
+
+
+                gr.update();
+            } else {
+                var description = record.description.toString();
+                var getCriterias = description.split('Create Criteria ');
+                gr.initialize();
+                gr.u_table = current.sys_class_name;
+                gr.u_record_id = current.number;
+                gr.u_assigned_to = current.assigned_to;
+                gr.u_assignment_group = current.assignment_group;
+                gr.u_category = record.category.getDisplayValue();
+                gr.u_caller = record.caller_id;
+                gr.u_location = record.location.getDisplayValue();
+                gr.u_language = record.caller_id.preferred_language;
+                gr.u_zipcode = record.caller_id.zip;
+                gr.u_state = record.state.getDisplayValue();
+                gr.u_assignment_type = propertyValue;
+                gr.u_criterias = getCriterias[1];
+                gr.insert();
+            }
+        }
+
+
+
+    }
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-04-05 07:28:29&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;1a819ab6979502106d10938de053af35&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Store Data&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a"&gt;697582f6975502106d10938de053afaa&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Pletra Assignment Engine"&gt;697582f6975502106d10938de053afaa&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_1a819ab6979502106d10938de053af35&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-04-05 07:40:16&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;async_always&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=1a819ab6979502106d10938de053af35"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1296115221</payload_hash>
+        <record_name>Store Data</record_name>
+        <reverted_from/>
+        <source>cfd7827a975502106d10938de053afaf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:40:16</sys_created_on>
+        <sys_id>adf456ba979502106d10938de053af2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18ead337d6a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:40:16</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>25f456ba3f950210d47028e4c290382e</update_guid>
+        <update_guid_history>25f456ba3f950210d47028e4c290382e:1296115221,fc4256f6a8950210276f14ba2351c9cd:1419347479</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-04-05 07:47:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>118654d81fa945208cbee9af47fba400</sys_id>
+        <sys_metadata>1a819ab6979502106d10938de053af35</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Store Data</sys_name>
+        <sys_package display_value="Pletra Assignment Engine" source="x_1371514_pletra_a">697582f6975502106d10938de053afaa</sys_package>
+        <sys_parent display_value="Task">838574397d31311076daf29f52070d17</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Pletra Assignment Engine">697582f6975502106d10938de053afaa</sys_scope>
+        <sys_scope_delete display_value="">b22fc6b7e0ce4b7692c46b5a2bd848e4</sys_scope_delete>
+        <sys_update_name>sys_script_1a819ab6979502106d10938de053af35</sys_update_name>
+        <sys_update_version display_value="sys_script_1a819ab6979502106d10938de053af35">adf456ba979502106d10938de053af2e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-04-05 07:47:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
